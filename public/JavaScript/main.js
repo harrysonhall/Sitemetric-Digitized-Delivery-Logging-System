@@ -30,3 +30,5 @@ import "./eventHandlers/gatesEventListener.js";
 
 // Experimental
 import "./experimental/pdfDownload.js";
+import "./experimental/pdfToSlack.js";
+import "./experimental/screenshotToSlack.js";
