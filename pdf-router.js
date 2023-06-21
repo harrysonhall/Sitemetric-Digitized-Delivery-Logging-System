@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 
 router.get('/pdf', async (request, response) => {
 
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
 
 	await page.setViewport({width: 1500, height: 1000});
