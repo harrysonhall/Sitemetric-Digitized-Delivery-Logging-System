@@ -37,6 +37,11 @@ app.use(express.json());
 // Route any requests made to the '//06092023/turner11' endpoint, to the router file
 app.use('/entries/06092023/turner11', router)
 
+const PORT = process.env.PORT || 3000; // Use the Heroku-assigned port number, or 3000 if running locally
+
+app.listen(PORT, function() {
+  console.log(`App listening on port ${PORT}`);
+});
 
 
 // Start server on port 3000
