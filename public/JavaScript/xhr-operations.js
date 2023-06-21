@@ -17,7 +17,7 @@ export function getXHR() {
 		const xhr = new XMLHttpRequest()
 
 		// 2.) Second, DEFINE the XMLHttpRequest. What type of request is it, to where should it go, and is it asyncronous?
-		xhr.open('GET', 'http://10.0.0.193:3000/entries/06092023/turner11', true);
+		xhr.open('GET', '/entries/06092023/turner11', true);
 
 		// 3.) Third, define what you will DO once the request is sent, and a response is received.
 		xhr.onload = function() {
@@ -69,7 +69,7 @@ export function postXHR(data) {
 		const xhr = new XMLHttpRequest();
 
 		// 2.) Second, DEFINE the XMLHttpRequest. What type of request is it, to where should it go, and is it asyncronous?
-		xhr.open('POST', `http://localhost:3000/entries/06092023/turner11`, true);
+		xhr.open('POST', `/entries/06092023/turner11`, true);
 
 		// 3.) Third, define what you will DO once the request has been sent, and a response is received.
 		xhr.onload = function() {
@@ -127,7 +127,7 @@ export function patchXHR(entryID, data) {
 		const xhr = new XMLHttpRequest();
 
 		// 2.) Second, DEFINE the XMLHttpRequest. What type of request is it, to where should it go, and is it asyncronous?
-		xhr.open('PATCH', `http://10.0.0.193:3000/entries/06092023/turner11/${entryID}`, true);
+		xhr.open('PATCH', `/entries/06092023/turner11/${entryID}`, true);
 
 		// 3.) Third, define what you will DO once the request is sent, and a response is received.
 		xhr.onload = function() {
@@ -179,7 +179,7 @@ export function deleteXHR(entryid) {
 		const xhr = new XMLHttpRequest();
 
 		// 2.) Second, DEFINE the XMLHttpRequest. What type of request is it, to where should it go, and is it asyncronous?
-		xhr.open('DELETE', `http://10.0.0.193:3000/entries/06092023/turner11/${entryid}`, true);
+		xhr.open('DELETE', `/entries/06092023/turner11/${entryid}`, true);
 
 		// 3.) Third, define what you will DO once the request is sent, and a response is received.
 		xhr.onload = function() {
