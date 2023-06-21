@@ -9,7 +9,7 @@ router.get('/pdf', async (request, response) => {
 
 	await page.setViewport({width: 1500, height: 1000});
 
-	await page.goto('https://cryptic-headland-11431-325b3506e0ae.herokuapp.com', {waitUntil: 'networkidle0'});
+	await page.goto('https://www.github.com', {waitUntil: 'networkidle0'});
 
     const height = await page.evaluate(() => document.documentElement.offsetHeight);
 
