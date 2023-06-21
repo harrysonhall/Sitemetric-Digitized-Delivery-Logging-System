@@ -24,6 +24,10 @@ const app = express();
 // Tell express where to serve static files from
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (request, response) => {
+	response.send('herro');
+})
+
 // Enable CORS for all resources on the server
 app.use(cors())
 
