@@ -21,6 +21,9 @@ connectDatabase();
 // Start express
 const app = express();
 
+// Tell express where to serve static files from
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Enable CORS for all resources on the server
 app.use(cors())
 
