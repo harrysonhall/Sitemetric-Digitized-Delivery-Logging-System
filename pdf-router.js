@@ -14,7 +14,7 @@ router.get('/pdf', async (request, response) => {
     const pdf = await page.pdf({
 		height: `${height}px`,
         printBackground: true,
-        width: '2000px'
+        width: '2010px'
     });
 
 	await browser.close();

@@ -132,6 +132,10 @@
 				text-align: center;
 			}
 
+			.row-input .desktop[desktop] {
+				display: block;
+			}
+
 		}
 
 

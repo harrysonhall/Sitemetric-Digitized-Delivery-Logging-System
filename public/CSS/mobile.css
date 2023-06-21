@@ -42,6 +42,10 @@
 			[mobile] {
 				display: none;
 			}
+
+			svg#arrow-svg {
+				display: none;
+			}
 		}
 
 
