@@ -4,7 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+
 	const router = require('./routes');
+	const pdfRouter = require('./pdf-router');
 
 // Create and call a function to connect to the MongoDB Atlas Database
 const connectDatabase = async () => {
@@ -24,10 +26,6 @@ const app = express();
 // Tell express where to serve static files from
 app.use(express.static('public'));
 
-app.get('/', (request, response) => {
-	response.send('herro');
-})
-
 // Enable CORS for all resources on the server
 app.use(cors())
 
@@ -36,6 +34,9 @@ app.use(express.json());
 
 // Route any requests made to the '//06092023/turner11' endpoint, to the router file
 app.use('/entries/06092023/turner11', router)
+
+// Route any requests made to the '//06092023/turner11' endpoint, to the router file
+app.use('/entries/06092023/turner11', pdfRouter)
 
 const PORT = process.env.PORT || 3000; // Use the Heroku-assigned port number, or 3000 if running locally
 

@@ -31,7 +31,15 @@
 		/* Over 1,500px */
 		@media (min-width: 1500px) {
 
+			.mobile-header-1 {
+				display: none;
+			}
+
 			.mobile-header-2 {
+				display: none;
+			}
+
+			[mobile] {
 				display: none;
 			}
 		}
