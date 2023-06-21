@@ -22,7 +22,7 @@ connectDatabase();
 const app = express();
 
 // Tell express where to serve static files from
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.get('/', (request, response) => {
 	response.send('herro');
