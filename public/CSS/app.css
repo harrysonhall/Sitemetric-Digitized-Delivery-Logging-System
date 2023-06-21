@@ -121,7 +121,7 @@
 			box-sizing: border-box;
 			display: grid;
 			grid-template-columns: 14px 1fr 14px;
-			grid-template-rows: 102px 1fr 102px;
+			grid-template-rows: 102px 1fr 170px;
 			grid-template-areas: 
 				".			search-gates	."
 				".			entries			."
@@ -370,7 +370,7 @@
 			white-space: nowrap;
 		}
 
-		#create-new-entry:hover {	cursor: pointer;	}
+		#create-new-entry:hover	{	cursor: pointer;	}
 
 		@media(max-width: 650px) {
 
