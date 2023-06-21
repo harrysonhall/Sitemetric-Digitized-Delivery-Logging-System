@@ -1,0 +1,220 @@
+
+
+/* rows */
+	.row:active,
+	.row:focus,
+	.row:focus-within {
+		border: 1px solid #0074FF;
+	}
+
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+
+			.row:hover {
+				background-color: #EEF5F7;
+			}
+		}
+
+	.row[editable] {
+		z-index: 10;
+	}
+
+	.row[visible] {
+		display: grid;
+	}
+
+	.row[hidden] {
+		display: none;
+	}
+
+
+
+/* delivery id */
+@media (max-width: 1500px) {
+
+	.row svg#drop-down-arrow {
+		transition: all 250ms;
+	}
+
+	.row[closed] svg#drop-down-arrow {
+		transform: rotate(0deg);
+	}
+
+	.row[opened] svg#drop-down-arrow {
+		transform: rotate(-90deg);
+	}
+}
+
+
+@keyframes highlightCurrentEntry {
+
+	0% {	border: solid #0074FF 1px;	}
+
+	50% {	border: solid red 1px;	}
+
+	100% {	border: solid #0074FF 1px;	}
+
+}
+
+
+
+
+
+
+
+
+
+/* inputs */
+
+	/* Row - Not Selected */
+	/* Row - Hovered */
+	/* Row - Selected/Focused/Active */
+	.row .row-input[disabled] {
+		color: #646464;
+		-webkit-text-fill-color: #646464;;
+		opacity: 1;
+	}
+
+	/* Row[editable] - Not Selected */
+	.row[editable] .row-input {
+		background-color: white;
+		border: 1px solid #646464;
+	}
+
+	/* Row[editable] - Hovered */
+	.row[editable] .row-input:hover {
+		border: 1px solid #0074FF;
+	}
+
+	/* Row[editable] - Selected/Focused/Active */
+	.row[editable] .row-input:focus-within {
+		border: 1px solid #0074FF;
+		color: #0074FF;
+	}
+
+	#arrivaltime[enabled], 
+	#departuretime[enabled], 
+	#gate[enabled] {
+		border: 1px solid #0074FF;
+		color: #0074FF;
+	}
+
+
+
+
+
+
+
+
+
+
+/* buttons */
+
+	/* Edit Button - Hovered/Active */
+		/* .row div#edit:hover,
+		.row div#edit:active,
+		.row div#edit:hover path,
+		.row div#edit:active path 
+		{
+			background-color:  #ADD6FD;
+			border: solid #0074FF 1px;
+			color: #0074FF;
+			cursor: pointer;
+			fill:  #0074FF;
+		} */
+
+	/* Delete Button - Hovered/Active */
+		/* .row div#delete:hover,
+		.row div#delete:active,
+		.row div#delete:hover path,
+		.row div#delete:active path 
+		{
+			background-color:  #FDC8C9;
+			border: solid #FF172F 1px;
+			color: #FF172F;
+			cursor: pointer;
+			fill:  #FF172F;
+		} */
+
+	/* Cancel Button - Hovered/Active */
+		/* .row div#cancel:hover,
+		.row div#cancel:active,
+		.row div#cancel:hover path,
+		.row div#cancel:active path 
+		{
+			background-color:  #FDC8C9;
+			border: solid #FF172F 1px;
+			color: #FF172F;
+			cursor: pointer;
+			fill:  #FF172F;
+		} */
+
+	/* Confirm  Button - Hovered/Active */
+		/* .row div#confirm:hover,
+		.row div#confirm:active,
+		.row div#confirm:hover path,
+		.row div#confirm:active path 
+		{
+			background-color:  #C2EFCC;
+			border: solid #03901C 1px;
+			color: #03901C;
+			cursor: pointer;
+			fill:  #03901C;;
+		} */
+
+
+
+
+
+
+	/* Edit & Delete Buttons  */
+		/* Default */
+		/* Row- Not Selected */
+		/* Row - Hovered */
+			.row div#edit, 
+			.row div#delete { 
+				opacity: 0;
+				pointer-events: none;
+			}
+
+		/* Row - Selected/Focused/Active */
+			.row:focus-within div#edit, 
+			.row:focus-within div#delete { 	
+				opacity: 1;	
+				pointer-events: all;
+			}
+
+		/* Row[editable] - Not Selected */
+		/* Row[editable] - Hovered */
+		/* Row[editable] - Selected/Focused/Active */
+			.row[editable] div#edit, 
+			.row[editable] div#delete { 
+				display: none;	
+				pointer-events: none;
+			}
+
+
+
+	/* Cancel & Confirm Buttons  */
+		/* Default */
+		/* Row - Not Selected */
+		/* Row - Hovered */
+		/* Row - Selected/Focused/Active */
+			.row div#confirm, 
+			.row div#cancel {
+				display: none;	
+				pointer-events: none
+			}
+
+		/* Row[editable] - Not Selected */
+		/* Row[editable] - Hovered */
+		/* Row[editable] - Selected/Focused/Active */
+			.row[editable] div#confirm, 
+			.row[editable] div#cancel {
+				display: flex;	
+				pointer-events: all;
+			}
+	
+
+
+/* Row[editable] */

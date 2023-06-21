@@ -1,0 +1,187 @@
+#time-picker, #gate-editor {
+    align-self: center;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: 1fr;
+	height: 160px;
+    position: absolute;
+
+	background-color: white;
+    border: 1px solid #0074FF;
+    border-radius: 5px;
+    z-index: 3;
+}
+#time-picker {
+	grid-template-areas: ". hour . minute . meridiem .";
+	grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr;
+	width: 160px;
+}
+#gate-editor {
+	grid-template-areas: "gate";
+	grid-template-columns: 1fr;
+	width: 120px;
+}
+
+@media (min-width: 1500px) {
+
+	#time-picker, #gate-editor {
+		height: 120px;
+		justify-self: center;
+		top: 35px;
+
+		animation: 250ms ease-in-out forwards timePickerIntro;
+		transform-origin: center top;
+	}
+	#time-picker { width: 120px; }
+	#gate-editor { width: 80px; }
+}
+@media(max-width: 1499px) {
+
+	#time-picker, #gate-editor {
+		right: 80px;
+
+		animation: 250ms ease-in-out forwards timePickerIntro;
+		transform-origin: center right;
+	}
+}
+
+
+	#time-picker-background, #gate-editor-background {
+		align-self: center;
+        height: 40px;
+		grid-row: 1;
+        justify-self: center;
+        position: relative;
+        width: calc(100% - 10px);
+		
+		background-color: #d7d7d7;
+		border-radius: 10px;
+		z-index: 3;
+	}
+	#time-picker-background { grid-column: 1 / span 7; }
+	#gate-editor-background { grid-column: 1 / span 3; }
+
+
+
+		.time-picker-container, .gate-editor-container {
+			align-self: center;
+			height: 114px;
+			position: relative;
+
+			/* border: 1px solid red; */
+			overflow-x: hidden;
+			overflow-y: scroll;
+			scroll-snap-type: y mandatory;
+			scrollbar-width: none; /* Firefox */
+			-ms-overflow-style: none;  /* IE and Edge */
+			z-index: 4;
+		}
+		.time-picker-container { width: 40px; }
+		.gate-editor-container { box-sizing: border-box; }
+
+
+		.gate-editor-container::-webkit-scrollbar,
+		.time-picker-container::-webkit-scrollbar {
+			display: none;
+		}
+
+
+			.time-picker-value,
+			.gate-editor-value {
+				align-items: center;
+				box-sizing: border-box;
+				display: flex;
+				height: 38px;
+
+				color: #646464;
+				/* border: 1px solid red; */
+				font-family: MonaSans;
+				font-size: 16px;
+				font-weight: 55;
+				scroll-snap-align: center;
+			}
+			.time-picker-value {
+				justify-content: flex-end;
+				padding-right: 13px;
+			}
+			.gate-editor-value {	justify-content: center;	}
+
+
+			@media (min-width: 1500px) {
+
+				.time-picker-value,
+				.gate-editor-value { font-size: 14px; }
+			}
+
+
+
+
+			@keyframes timePickerIntro {
+
+				0% {
+					opacity: 0;
+					transform: scale(0.25);
+				}
+	
+				100% {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+	
+			@keyframes timePickerOutro {
+	
+				0% {
+					opacity: 1;
+					transform: scale(1);
+				}
+	
+				100% {
+					opacity: 0;
+					transform: scale(0.25);
+				}
+			}
+	
+	
+	
+	
+	
+	
+	
+	#clear-time {
+		align-items: center;
+		bottom: -35px;
+		justify-content: center;
+		justify-self: center;
+		padding: 8px 14px;
+		position: absolute;
+		
+		background-color: white;
+		border: solid red 1px;
+		border-radius: 5px;
+		color: red !important;
+		font-family: MonaSans;
+		font-size: 10px;
+		font-weight: 65;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+	}
+
+	#clear-time:hover {
+		cursor: pointer;
+	}
+	
+	#arrivaltime #clear-time {
+		display: none;
+	}
+	
+	#departuretime #clear-time {
+		display: flex;
+	}
+
+	@media (max-width: 1499px) {
+
+		#clear-time {
+			justify-self: flex-start;
+		}
+	}

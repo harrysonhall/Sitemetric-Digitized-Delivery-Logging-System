@@ -1,0 +1,287 @@
+.row {
+	box-sizing: border-box;
+	transition: background-color 250ms, border 350ms, height 500ms;
+	background-color: white;
+	border: 1px solid #e5eae9;
+	outline: none;
+	position: relative;
+}
+
+		/* Media Queries */
+
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			/* By default, apply the closed state height */
+			/* height: 91px; */
+			/* height: 495px; */
+
+			.row {
+				display: grid;
+				grid-template-areas:
+					". . . ."
+					". headers headers ."
+					". deliveryid status ."
+					". date date ."
+					". couriercompany couriercompany ."
+					". cargo cargo ."
+					". arrivaltime arrivaltime ."
+					". departuretime departuretime ."
+					". gate gate ."
+					". status2 status2 ."
+					". courierperson courierperson ."
+					". buttons buttons .";
+				grid-template-columns: 14px 1fr 1fr 14px;
+				grid-template-rows: 7px 22px 61px repeat(8, 39px) 1fr;
+				margin-bottom: 5px;
+
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			.row[closed] {
+				height: 91px;
+			}
+
+			.row[opened] {
+				height: 495px
+			}
+		}
+
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+
+			.row {
+				display: grid;
+				grid-template-columns: 1.35% 7.06% 8.3% 12.72% 18.78% 8.48% 8.48% 6.77% 9.36% 10.65% 6.77% 1fr;
+				grid-template-rows: 1fr;
+				grid-template-areas: ". deliveryid date couriercompany cargo arrivaltime departuretime gate status courierperson buttons .";
+				height: 85px;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	/* inputs */
+	input {
+		overflow: hidden;
+	}
+
+	.row-input {
+		align-self: center;
+		padding: 7px 10px;
+		position: relative;
+
+		transition: 
+			all 250ms;
+
+		background-color: transparent;
+		border: 1px solid #e4eae900;
+		border-radius: 5px;
+		color: #646464;
+		font-family: MonaSans;
+		font-size: 12px;
+		font-weight: 55;
+		opacity: 1;
+		outline: none;
+		pointer-events: all;
+		z-index: 2;
+	}
+
+	#date {
+		border: transparent 1px solid !important;
+		background-color: transparent !important;
+	}
+
+
+	#arrivaltime, 
+	#departuretime, 
+	#gate {
+		display: grid;
+		position: relative;
+		text-align: center;
+		z-index: 3;
+	}
+
+	
+	
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			.row-input { 
+				justify-self: flex-end;
+				text-align: right;
+			}
+		}
+
+
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+
+			.row-input { 
+				justify-self: center;
+				text-align: center;
+			}
+
+		}
+
+
+
+
+
+
+
+
+	/* delivery id */
+	.deliveryid-text {
+		font-family: MonaSans;
+		font-size: 13.5px;
+		font-weight: 85;
+	}
+
+			/* Under 1,500px */
+			@media (max-width: 1499px) {
+
+				.deliveryid { 
+					align-self: center;
+					transform: translate(0px, -6px);
+				}
+			}
+
+			/* Over 1,500px */
+			@media (min-width: 1500px) {
+
+				.deliveryid { 
+					align-self: center;
+					justify-self: center;
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* status */
+	.status {
+		align-self: center;
+		padding: 6px 12px;
+
+		border-radius: 5px;
+		font-family: MonaSans;
+		font-size: 10px;
+		font-weight: 65;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		pointer-events: none;
+		position: relative;
+		user-select: none;
+		z-index: 10;
+	}
+
+		.in-progress {
+			background-color: #ADD6FD;
+			border: 1px solid #0074FF;
+			color: #0074FF;
+		}
+
+		.completed {
+			background-color: #ABE8B3;
+			border: 1px solid #15B200;
+			border-radius: 5px;
+			color: #15B200;
+		}
+
+				/* Under 1,500px */
+				@media (max-width: 1499px) {	.status {	justify-self: flex-end;		margin-right: 21px;	}	}
+
+				/* Over 1,500px */
+				@media (min-width: 1500px) {	.status {	justify-self: center;	}	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Row Buttons */
+		.row-button {
+			display: flex;
+			padding: 5px 12px 4px 12px;
+
+			transition: all 250ms;
+
+			background-color: transparent;
+			border: solid #86868E 1px;
+			border-radius: 5px;
+			color: #86868E;
+			font-family: MonaSans;
+			font-size: 11px;
+			font-weight: 75;
+			text-transform: uppercase;
+			user-select: none;
+		}
+
+			.row-button svg {
+				height: 10px;
+				margin-right: 5px;
+				width: 10px;
+				
+				transition: fill 250ms;
+
+				fill:#86868E;
+			}
+			.row-button svg#cancel-svg { width: 7px; }
+
+			div#confirm, div#cancel { display: none; }
+
+
+			/* Under 1,500px */
+			@media (max-width: 1499px) {
+
+				.row-button {	
+					align-self: center; 
+				}
+				
+				div#edit, div#confirm {	justify-self: flex-end;	}
+
+				div#delete, div#cancel {	justify-self: flex-start;	}
+
+			}
+
+			/* Over 1,500px */
+			@media (min-width: 1500px) {
+
+				.row-button {	
+					align-self: center;
+					justify-self: center;
+				}
+
+				div#edit, div#confirm {	transform: translate(-9px, -17px);	}
+
+				div#cancel, div#delete {	transform: translate(0px, 17px);	}
+			}
+

@@ -1,0 +1,26 @@
+
+#notification-modal {
+    align-items: center;
+    box-sizing: border-box;
+	display: none;
+	/* display: flex; */
+    height: 50px;
+    justify-content: space-evenly;
+	position: fixed;
+    right: 30px;
+    top: 30px;
+    width: 260px;
+    z-index: 100;
+	
+	background-color: #F5F5F5;
+	border: solid red 1px;
+    border-radius: 5px;
+}
+
+	#notification-text {
+		/* border: solid red 1px; */
+		color: black;
+		font-family: MonaSans;
+		font-size: 14px;
+		font-weight: 85;
+	}

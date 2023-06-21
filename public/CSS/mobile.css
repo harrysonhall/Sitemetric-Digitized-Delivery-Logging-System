@@ -1,0 +1,65 @@
+
+.mobile-header-1 {
+	color: #A2A2A2;
+	font-family: MonaSans;
+	font-size: 11.5px;
+	font-weight: 65;
+	pointer-events: none;
+	white-space: nowrap;
+}
+
+.mobile-header-2 {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	height: 100%;
+    padding-left: 13px;
+	position: relative;
+	width: 100%;
+
+	border-radius: 10px;
+	color: black;
+	font-family: MonaSans;
+	font-size: 12px;
+	font-weight: 75;
+	pointer-events: none;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+
+			.mobile-header-2 {
+				display: none;
+			}
+		}
+
+
+
+
+
+	.mobile-time {
+		align-items: center;
+		align-self: center;
+		display: flex;
+		grid-area: deliveryid;
+		justify-content: space-between;
+		justify-self: flex-start;
+		margin-top: 25px;
+		position: relative; width: 120px;
+		
+		pointer-events: none;
+	}
+
+
+		.mobile-departuretime {
+			left: 80px; 
+			position: absolute;	
+			text-transform: uppercase;
+		}
+
+		.mobile-arrivaltime {
+			text-transform: uppercase;
+		}

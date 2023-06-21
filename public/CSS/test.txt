@@ -1,0 +1,435 @@
+
+.deliveryid {
+	display: flex;
+	width: 80px;
+
+	/* border: solid red 1px; */
+}
+
+	.deliveryid-text {
+		margin: auto 0px auto auto;
+		width: 55px;
+
+		/* border: solid red 1px; */
+		color: black;
+		direction: rtl;
+		font-family: MonaSans;
+		font-size: 14px;
+		font-weight: 85;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+
+
+
+	/* Under 1,500px */
+	@media (max-width: 1499px) {
+
+		.deliveryid { 
+			align-self: center;
+			transform: translate(0px, -6px);
+		}
+	}
+
+	/* Over 1,500px */
+	@media (min-width: 1500px) {
+
+		.deliveryid { 
+			align-self: center;
+			justify-self: center;
+		}
+	}
+
+
+
+	.couriercompany {
+	transition: 
+		background-color 250ms, 
+		border 250ms, 
+		color 250ms;
+
+	border: 1px solid #e4eae900;
+	border-radius: 5px;
+	color: #646464;
+	font-family: MonaSans;
+	font-weight: 55;
+	outline: none;
+	overflow: hidden;
+	padding: 7px 10px;
+	position: relative;
+	z-index: 10;
+}
+
+	.couriercompany:empty:not(:focus-within)::before {
+		content: 'Ex. DeliveryInc'
+
+	}
+
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			.couriercompany {
+				align-self: center;
+				font-size: 12px;
+				justify-self: flex-end;
+				margin-right: 4px;
+				max-width: 150px;
+
+				white-space: nowrap;
+			}
+		}
+	
+	
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+	
+			.couriercompany {
+				align-self: center;
+				font-size: 13px;
+				justify-self: center;
+
+				max-width: 80%;
+			}
+		}
+
+
+
+
+
+
+.row:focus-within[data-state="editable"] .couriercompany[contenteditable="true"] {
+	background-color: #ffffff;
+	border: 1px solid #646464;
+}
+
+.row:focus-within[data-state="editable"] .couriercompany[contenteditable="true"]:hover {
+	border: 1px solid #0078FF;
+}
+
+.row:focus-within[data-state="editable"] .couriercompany[contenteditable="true"]:focus-within {
+	border: 1px solid #0078FF;
+	color: #0078FF;
+}
+
+
+
+
+.cargo {
+	transition: 
+		background-color 250ms, 
+		border 250ms, 
+		color 250ms;
+
+	background-color: #ffffff00;
+	border: 1px solid #e4eae900;
+	border-radius: 5px;
+	color: #646464;
+	font-family: MonaSans;
+	font-weight: 55;
+	outline: none;
+	overflow: hidden;
+	padding: 7px 10px;
+	position: relative;
+	z-index: 10;
+}
+
+	.cargo:empty:not(:focus-within)::before {
+		content: 'Ex. Materials, Vehicles, etc..'
+
+	}
+
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			.cargo{
+				align-self: center;
+				font-size: 12px;
+				justify-self: flex-end;
+				margin-right: 4px;
+				max-width: 200px;
+
+				white-space: nowrap;
+			}
+		}
+	
+	
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+	
+			.cargo {
+				align-self: center;
+				font-size: 13px;
+				justify-self: center;
+
+				max-width: 80%;
+			}
+		}
+
+
+
+.row:focus-within[data-state="editable"] .cargo[contenteditable="true"] {
+	background-color: #ffffff;
+	border: 1px solid #646464;
+}
+
+.row:focus-within[data-state="editable"] .cargo[contenteditable="true"]:hover {
+	border: 1px solid #0078FF;
+}
+
+.row:focus-within[data-state="editable"] .cargo[contenteditable="true"]:focus-within{
+	border: 1px solid #0078FF;
+	color: #0078FF;
+}
+
+
+
+
+
+.arrivaltime {
+	transition: 
+		background-color 250ms, 
+		border 250ms, 
+		color 250ms;
+
+	border: 1px solid #e4eae900;
+	border-radius: 5px;
+	color: #646464;
+	font-family: MonaSans;
+	font-weight: 55;
+	outline: none;
+	padding: 7px 10px;
+	position: relative;
+	z-index: 10;
+}
+
+	.arrivaltime:empty:not(:focus-within)::before {
+		content: '7:28 AM'
+
+	}
+
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			.arrivaltime{
+				align-self: center;
+				font-size: 12px;
+				justify-self: flex-end;
+	
+				margin-right: 4px;
+			}
+		}
+	
+	
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+	
+			.arrivaltime {
+				align-self: center;
+				font-size: 13px;
+				justify-self: center;
+			}
+		}
+
+
+
+.row:focus-within[data-state="editable"] .arrivaltime {
+	background-color: #ffffff;
+	border: 1px solid #646464;
+}
+
+.row:focus-within[data-state="editable"] .arrivaltime:hover {
+	border: 1px solid #0078FF;
+}
+
+.row:focus-within[data-state="editable"] .arrivaltime:focus-within {
+	border: 1px solid #0078FF;
+	color: #0078FF;
+}
+
+
+
+
+
+
+.departuretime {
+	transition: 
+		background-color 250ms, 
+		border 250ms, 
+		color 250ms;
+
+	border: 1px solid #e4eae900;
+	border-radius: 5px;
+	color: #646464;
+	font-family: MonaSans;
+	font-weight: 55;
+	outline: none;
+	padding: 7px 10px;
+	position: relative;
+	z-index: 10;
+}
+
+	.departuretime:empty:not(:focus-within)::before {
+		content: '12:06 PM'
+
+	}
+
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			.departuretime{
+				align-self: center;
+				font-size: 12px;
+				justify-self: flex-end;
+	
+				margin-right: 4px;
+			}
+		}
+	
+	
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+	
+			.departuretime {
+				align-self: center;
+				font-size: 13px;
+				justify-self: center;
+			}
+		}
+
+
+
+
+.row:focus-within[data-state="editable"] .departuretime {
+	background-color: #ffffff;
+	border: 1px solid #646464;
+}
+
+.row:focus-within[data-state="editable"] .departuretime:hover {
+	border: 1px solid #0078FF;
+}
+
+.row:focus-within[data-state="editable"] .departuretime:focus-within {
+	border: 1px solid #0078FF;
+	color: #0078FF;
+}
+
+
+
+
+.gate {
+	transition: 
+		background-color 250ms,
+		border 250ms, 
+		color 250ms;
+
+	border: 1px solid #e4eae900;
+	border-radius: 5px;
+	color: #646464;
+	font-family: MonaSans;
+	font-weight: 55;
+	outline: none;
+	padding: 7px 10px;
+	position: relative;
+	z-index: 10;
+}
+
+	.gate:empty:not(:focus-within)::before {
+		content: 'Gate A'
+
+	}
+
+		/* Under 1,500px */
+		@media (max-width: 1499px) {
+
+			.gate{
+				align-self: center;
+				font-size: 12px;
+				justify-self: flex-end;
+	
+				margin-right: 4px;
+			}
+		}
+	
+	
+		/* Over 1,500px */
+		@media (min-width: 1500px) {
+	
+			.gate {
+				align-self: center;
+				font-size: 13px;
+				justify-self: center;
+			}
+		}
+
+
+
+.row:focus-within[data-state="editable"] .gate {
+	background-color: #ffffff;
+	border: 1px solid #646464;
+}
+
+.row:focus-within[data-state="editable"] .gate:hover {
+	border: 1px solid #0078FF;
+}
+
+.row:focus-within[data-state="editable"] .gate:focus-within{
+	border: 1px solid #0078FF;
+	color: #0078FF;
+}
+
+
+
+
+.status {
+	font-family: MonaSans;
+	font-size: 10px;
+	font-weight: 65;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	pointer-events: none;
+	position: relative;
+	user-select: none;
+	z-index: 10;
+}
+
+	.in-progress {
+		background-color: #ADD6FD;
+		border: 1px solid #0074FF;
+		border-radius: 5px;
+		color: #0074FF;
+		content: 'in-progress';
+		padding: 6px 12px;
+	}
+
+	.completed {
+		background-color: #ABE8B3;
+		border: 1px solid #15B200;
+		border-radius: 5px;
+		color: #15B200;
+		content: 'completed';
+		padding: 6px 12px;
+	}
+
+
+
+	/* Under 1,500px */
+	@media (max-width: 1499px) {
+
+		.status {
+			align-self: center;
+			justify-self: flex-end;
+
+			margin-right: 21px;
+		}
+	}
+
+
+	/* Over 1,500px */
+	@media (min-width: 1500px) {
+
+		.status {
+			align-self: center;
+			justify-self: center;
+		}
+	}

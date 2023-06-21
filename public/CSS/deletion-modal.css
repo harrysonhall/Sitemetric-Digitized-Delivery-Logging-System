@@ -1,0 +1,81 @@
+#deletion-modal-overlay {
+	bottom: 0px;
+	left: 0px;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+
+	background-color: #ffffff00;
+	border: solid red 1px;
+	z-index: 100;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+	svg#deletion-modal {
+		display: none;
+		width: 300px;
+	}
+
+
+	div#deletion-modal {
+		display: flex;
+		flex-direction: column;
+		height: 200px;
+		position: relative;
+		width: 320px;
+
+		background-color: white;
+		border: solid #0074FF 1px;
+		border-radius: 10px;
+		color: #646464;
+		font-family: MonaSans;
+		font-size: 12px;
+		font-weight: 55;
+		white-space: nowrap;
+		z-index: 200;
+	}
+
+	
+		#deletion-id {
+			margin: 0px auto;
+
+			/* border: solid red 1px; */
+			color: black;
+			font-weight: 75;
+		}
+
+		#deletion-id::before,
+		#deletion-id::after {
+			content: attr(data-before);
+		}
+
+			#delete-entry,
+			#cancel-delete {
+				bottom: 25px;
+				height: 30px;
+				position: absolute;
+				width: 120px;
+
+				transition: all 250ms;
+
+				background-color: rgba(0, 0, 0, 0);
+				border: solid black 1px;
+				border-radius: 5px;
+				color: black;
+				font-family: MonaSans;
+				font-size: 11px;
+				font-weight: 75;
+				outline: none;
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+				#delete-entry:hover,
+				#cancel-delete:hover {
+					background-color: black;
+					border: solid rgba(0, 0, 0, 0) 1px;
+					color: white;
+				}

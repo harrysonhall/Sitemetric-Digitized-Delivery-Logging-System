@@ -1,0 +1,89 @@
+
+/* Normal styles */
+@font-face {
+	font-family: MonaSans;
+	font-style: normal;
+	font-weight: 45;
+	src: url('./Fonts/WOFF/Mona-Sans-Light.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: normal;
+	font-weight: 55;
+	src: url('./Fonts/WOFF/Mona-Sans-Regular.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: normal;
+	font-weight: 65;
+	src: url('./Fonts/WOFF/Mona-Sans-Medium.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: normal;
+	font-weight: 75;
+	src: url('./Fonts/WOFF/Mona-Sans-SemiBold.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: normal;
+	font-weight: 85;
+	src: url('./Fonts/WOFF/Mona-Sans-Bold.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: normal;
+	font-weight: 95;
+	src: url('./Fonts/WOFF/Mona-Sans-Black.woff');
+}
+
+
+
+
+/* Italic Styles */
+@font-face {
+	font-family: MonaSans;
+	font-style: italic;
+	font-weight: 45;
+	src: url('./Fonts/WOFF/Mona-Sans-LightItalic.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: italic;
+	font-weight: 55;
+	src: url('./Fonts/WOFF/Mona-Sans-RegularItalic.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: italic;
+	font-weight: 65;
+	src: url('./Fonts/WOFF/Mona-Sans-MediumItalic.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: italic;
+	font-weight: 75;
+	src: url('./Fonts/WOFF/Mona-Sans-SemiBoldItalic.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: italic;
+	font-weight: 85;
+	src: url('./Fonts/WOFF/Mona-Sans-BoldItalic.woff');
+}
+
+@font-face {
+	font-family: MonaSans;
+	font-style: italic;
+	font-weight: 95;
+	src: url('./Fonts/WOFF/Mona-Sans-BlackItalic.woff');
+}

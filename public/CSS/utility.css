@@ -1,0 +1,13 @@
+html {
+	background-color: #E1E3E4;
+}
+
+	body {
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	[highlight-border] {
+		border: 1px solid red;
+	}
