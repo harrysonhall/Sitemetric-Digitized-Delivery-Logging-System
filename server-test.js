@@ -42,9 +42,3 @@ const PORT = process.env.PORT || 3000; // Use the Heroku-assigned port number, o
 app.listen(PORT, function() {
   console.log(`App listening on port ${PORT}`);
 });
-
-
-// Start server on port 3000
-app.listen(3000, () => {
-	console.log('Server is running on port 3000');
-})
