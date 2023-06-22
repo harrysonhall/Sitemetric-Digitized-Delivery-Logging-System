@@ -32,3 +32,8 @@ import "./eventHandlers/gatesEventListener.js";
 import "./experimental/pdfDownload.js";
 import "./experimental/pdfToSlack.js";
 import "./experimental/screenshotToSlack.js";
+
+
+
+// Middleware functions
+import "./middlewareFunctions.js";

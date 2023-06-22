@@ -54,7 +54,7 @@ document.addEventListener('click', async (clickEvent) => {
 
 	if(clickEvent.target.id === "create-new-entry") {
 
-		createNewEntry();
+		createNewEntry(clickEvent);
 	}
 
 
@@ -67,7 +67,6 @@ document.addEventListener('click', async (clickEvent) => {
 
 
 
-console.log(createEntryValues())
 
 
 
@@ -76,7 +75,7 @@ console.log(createEntryValues())
 
 
 
-		function createNewEntry() {
+		function createNewEntry(e) {
 
 			if(Global.currentEditableForm === null) {
 
@@ -102,4 +101,12 @@ console.log(createEntryValues())
 
 				setToEditableState();
 			}
+
+			const button = e.target;
+
+			button.style['animation'] = '100ms ease-in-out forwards buttonClick';
+			button.addEventListener('animationend', () => {
+				button.style['animation'] = ''
+				console.log('animation cleared');
+			}, { once: true });
 		}

@@ -5,7 +5,15 @@ saveAsPDFButton.addEventListener('click', (e) => {
 
 	console.log('saving as pdf');
 	
-	getPDFXHR().then(() => console.log('opening PDF'))
+	getPDFXHR().then(() => console.log('opening PDF'));
+
+	const button = e.target;
+
+	button.style['animation'] = '100ms ease-in-out forwards buttonClick';
+	button.addEventListener('animationend', () => {
+		button.style['animation'] = ''
+		console.log('animation cleared');
+	}, { once: true });
 
 })
 

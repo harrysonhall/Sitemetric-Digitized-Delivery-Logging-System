@@ -5,7 +5,15 @@ PDFToSlackButton.addEventListener('click', (e) => {
 
 	console.log('pushing to slack as pdf');
 	
-	getPDFToSlackXHR().then(() => console.log('sending PDF'))
+	getPDFToSlackXHR().then(() => console.log('sending PDF'));
+
+	const button = e.target;
+
+	button.style['animation'] = '100ms ease-in-out forwards buttonClick';
+	button.addEventListener('animationend', () => {
+		button.style['animation'] = ''
+		console.log('animation cleared');
+	}, { once: true });
 
 })
 

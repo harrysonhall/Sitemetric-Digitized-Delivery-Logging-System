@@ -1,6 +1,7 @@
 import Global from "./Global.js";
 import { setDefaultRowValues, setDesktopRowValues, setMobileRowValues, setRowValues } from "./onStart.js";
 import { filterEntriesByGate } from "./eventHandlers/gatesEventListener.js";
+import { checkAndUpdateStatus } from "./middlewareFunctions.js";
 
 
 
@@ -225,6 +226,8 @@ export function setToEditableState() {
 export function setToNonEditableState() {
 
     if(Global.currentEditableForm !== null) { 
+
+        checkAndUpdateStatus(Global.currentEditableForm);
 
         filterEntriesByGate();
 

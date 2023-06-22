@@ -5,6 +5,7 @@ import { confirmButtonHandler } from "./eventHandlers/confirmEventHandler.js";
 import { deleteButtonHandler } from "./eventHandlers/deleteEventHandler.js";
 import { filterFromSearchbar } from "./eventHandlers/searchEventHandler.js";
 import { filterEntriesByGate } from "./eventHandlers/gatesEventListener.js";
+import { checkAndUpdateStatus } from "./middlewareFunctions.js";
 
 
 
@@ -68,8 +69,12 @@ import { filterEntriesByGate } from "./eventHandlers/gatesEventListener.js";
 						row.children['couriercompany'].value 											= values.couriercompany;
 						row.children['cargo'].value 													= values.cargo;
 						row.children['arrivaltime'].children['time-value'].innerHTML					= values.arrivaltime;
-						row.children['departuretime'].children['time-value'].innerHTML					= values.departuretime;
 						row.children['gate'].children['gate-value'].innerHTML 							= values.gate;
+						if(values.departuretime === undefined ){
+							row.children['departuretime'].children['time-value'].innerHTML					= '-';
+							} else row.children['departuretime'].children['time-value'].innerHTML			= values.departuretime;
+	
+						checkAndUpdateStatus(row);
 					}
 
 
@@ -82,11 +87,13 @@ import { filterEntriesByGate } from "./eventHandlers/gatesEventListener.js";
 
 					export function setMobileRowValues(row, values) {
 						// Set Mobile Specific Row Values
-						row.children['mobile-date'].innerHTML 										= values.date;
-						row.children['mobile-gate'].innerHTML 										= values.gate;
-						row.children['mobile-time'].children['mobile-arrivaltime'].innerHTML 		= values.arrivaltime;
-						row.children['mobile-time'].children['mobile-departuretime'].innerHTML 		= values.departuretime;
-						row.children['courierperson'].value 										= `${values.couriername.first} ${values.couriername.last}`;
+						row.children['mobile-date'].innerHTML 												= values.date;
+						row.children['mobile-gate'].innerHTML 												= values.gate;
+						row.children['mobile-time'].children['mobile-arrivaltime'].innerHTML 				= values.arrivaltime;
+						row.children['courierperson'].value 												= `${values.couriername.first} ${values.couriername.last}`;
+						if(values.departuretime === undefined ){
+						row.children['mobile-time'].children['mobile-departuretime'].innerHTML 				= '-';
+							} else row.children['mobile-time'].children['mobile-departuretime'].innerHTML 	= values.departuretime;
 						if(values.couriername.first === "" && values.couriername.last === "") {
 						row.children['courierperson'].value											= ""}
 					}

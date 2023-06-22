@@ -165,7 +165,7 @@
 			position: relative;
 			width: 350px;
 
-			border: solid red 1px;
+			/* border: solid red 1px; */
 		}
 
 			.gates {
@@ -173,30 +173,14 @@
 
 				transition: 250ms;
 
-				border: solid red 1px;
+				/* border: solid red 1px; */
 				font-family: MonaSans;
 				font-size: 23px;
 				font-weight: 85;
 				white-space: nowrap;
 			}
 
-				.gates-checkbox {
-					-webkit-appearance: none;
-					-moz-appearance: none;
-					appearance: none;
-
-					bottom: 0px;
-					box-sizing: border-box;
-					left: 0px;
-					margin: 0px;
-					position: absolute;
-					right: 0px;
-					top: 0px;
-
-					z-index: 10;
-				}
-
-				.gates-checkbox:hover { cursor: pointer;}
+			.gates:hover { cursor: pointer;}
 
 		@media (max-width: 849px) {
 
@@ -228,7 +212,7 @@
 			position: relative;
 			width: 350px;
 
-			border: solid red 1px;
+			/* border: solid red 1px; */
 		}
 
 			div#search-container path { 

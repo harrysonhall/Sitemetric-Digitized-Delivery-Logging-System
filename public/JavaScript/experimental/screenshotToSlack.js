@@ -5,7 +5,15 @@ screenshotToSlackButton.addEventListener('click', (e) => {
 
 	console.log('pushing to slack as pdf');
 	
-	getScreenshotToSlackXHR().then(() => console.log('sending screenshot'))
+	getScreenshotToSlackXHR().then(() => console.log('sending screenshot'));
+
+	const button = e.target;
+
+	button.style['animation'] = '100ms ease-in-out forwards buttonClick';
+	button.addEventListener('animationend', () => {
+		button.style['animation'] = ''
+		console.log('animation cleared');
+	}, { once: true });
 
 })
 
