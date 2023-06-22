@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache"
+    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
+    "autopush-pdf": "node autopush-pdf-to-slack.js",
+    "autopush-screenshot": "node autopush-screenshot-to-slack.js"
   },
   "keywords": [],
   "author": "",
